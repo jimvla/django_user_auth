@@ -14,8 +14,8 @@
     {% else %}
       <div class="content">
         <p>You are not logged in</p>
-        <a class="btn btn-info" href="{% url 'login' %}">Login</a>
-        <a class="btn btn-info" href="{% url 'register' %}">Sign Up</a>
+        <a class="btn btn-success" href="{% url 'login' %}">Log In</a>
+        <a class="btn btn-warning" href="{% url 'register' %}">Sign Up</a>
       </div>
     {% endif %}
   {% endblock %}

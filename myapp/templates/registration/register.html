@@ -7,7 +7,7 @@
 	{% csrf_token %}
 	{% for field in form %}
         <div class="mb-3">
-            {{ field.label_tag }} {{ field }}
+            {{ field }}
         </div>
 	{% endfor %}
 	<input class="btn btn-success" type="submit" value="Register" />
