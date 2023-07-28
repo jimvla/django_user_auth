@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Create an Account</h2>
+    <br>
+    <form method="POST" novalidate>
+	{% csrf_token %}
+	{% for field in form %}
+        <div class="mb-3">
+            {{ field.label_tag }} {{ field }}
+        </div>
+	{% endfor %}
+	<input class="btn btn-success" type="submit" value="Register" />
+</form>
+{% endblock %}
