@@ -4,7 +4,7 @@
     {% if user.is_authenticated %}
         <div class="card">
             <div class="card-header">
-                Hello, {{user.username}}
+                Welcome back, {{user.username}}
             </div>
             <div class="card-body">
                 <a class="btn btn-danger" href="{% url 'logout' %}">Log Out</a>

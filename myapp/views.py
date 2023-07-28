@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm
+
 # Create your views here.
 
 def index(request):
@@ -17,7 +17,7 @@ def login_user(request):
             login(request, user)
             return redirect('index')
         else:
-            messages.success(request, "There was an error login in, try again")
-            return redirect("login")
+            messages.warning(request, 'Failed to Login')
+            return redirect('login')
     else:
         return render(request, 'registration/login.html', {})
